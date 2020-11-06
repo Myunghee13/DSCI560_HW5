@@ -7,4 +7,4 @@ COPY . .
 
 EXPOSE 5006
 
-CMD ["bokeh", "serve", "--allow-websocket-origin=ip172-18-0-59-buiecm1qckh000ecb3og-5006.direct.labs.play-with-docker.com", "./app.py"]
+CMD ["bokeh", "serve", "--allow-websocket-origin=ip172-18-0-59-buiecm1qckh000ecb3og-5006.direct.labs.play-with-docker.com", "app.py"]
