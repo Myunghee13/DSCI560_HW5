@@ -65,12 +65,12 @@ cd DSCI560_HW5
 ```
 vim Dockerfile
 ```
-### 8. Enter 'i' for insert mode, and revise ssh ip to your ssh ip obtained form step 6.
+### 8. Enter 'i' for insert mode, and revise ssh ip to your ssh ip obtained from step 6.
 <p align="center">
     <img src="screenshot2.png" width="1200px" height="40px"/>
 </p>
 
-### 9. Save the revised Dockerfile by pressing key, and then enter:
+### 9. Save the revised Dockerfile by pressing Esc key, and then enter:
 ```
 :wq!
 ```
@@ -86,7 +86,7 @@ docker images -a
 ```
 docker run --rm -p 5006:5006 -it dashboard
 ```
-### 13. Click open port by clicking the red box to see the dashboard
+### 13. Click port number to see the dashboard
 <p align="left">
     <img src="screenshot3.png" width="500px"/>
 </p>
