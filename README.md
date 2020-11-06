@@ -65,29 +65,41 @@ cd DSCI560_HW5
 ```
 vim Dockerfile
 ```
-### 8. Enter 'i' for insert mode to revise the Dockerfile
-### 9. Revise ssh ip in the last line to your ssh ip obtained from step 6. The ssh ip starts with ip and ends before "-5006."
+### 8. Press 'i' key for insert mode to revise the Dockerfile
+### 9. Revise ssh ip in the last line to your ssh ip obtained from step 6. The ssh ip starts with "ip" and ends before "-5006."
 <p align="center">
     <img src="screenshot2.png" width="1200px" height="40px"/>
 </p>
 
-### 10. Save the revised Dockerfile by pressing Esc key, and then enter:
+### 10. Save the revised Dockerfile
+```
+press Esc key, and then enter:
+```
 ```
 :wq!
 ```
-### 11. Create docker image from the Dockerfile
+### 11. Check if the Dockerfile has revised correctly
+```
+cat Dockerfile
+```
+### 12. Create docker image from the Dockerfile
 ```
 docker build . -t dashboard
 ```
-### 12. Check if the docker image, dashboard, is created
+### 13. Check if the docker image, dashboard, is created
 ```
 docker images -a
 ```
-### 13. Execute the docker image, dashboard 
+### 14. Execute the docker image, dashboard 
 ```
 docker run --rm -p 5006:5006 -it dashboard
 ```
-### 14. Click port number to see the dashboard
+### 15. Click port number to see the dashboard
 <p align="left">
     <img src="screenshot3.png" width="500px"/>
 </p>
+
+### 16. To finish executing it:
+```
+ctrl + c
+```
