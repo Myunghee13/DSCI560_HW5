@@ -138,7 +138,7 @@ div2 = Div(text="""
 <h1>4. Cases and deaths % by race to their population %</h1>
 <p>You can see the number when you mouse over the bars.</p>
 <p>You can select the date by the "Select Date" button.</p>
-<p>No record if there is no date in the button.</p>
+<p><strong>No record</strong> if there is no date in the button.</p>
 """)
 
 curdoc().add_root(column(div1, plot1, div2, row(plot2, date_select)))
