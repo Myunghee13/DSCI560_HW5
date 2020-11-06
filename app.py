@@ -54,6 +54,9 @@ data2 = data2[["date","date_time", "race","confirmed_cases_percent", "deaths_per
 data2 = data2.set_index(['date_time'])
 
 data2.fillna("no record", inplace = True)
+data2.confirmed_cases_percent = [ele*100 for ele in data2.confirmed_cases_percent]
+data2.deaths_percent = [ele*100 for ele in data2.deaths_percent]
+data2.population_percent = [ele*100 for ele in data2.population_percent]
 
 date_list = sorted(set(data2.date), reverse=True)
 sel_date = date_list[0]
@@ -70,7 +73,7 @@ def get_dataset (date):
     return ColumnDataSource(data=data)
 
 def make_plot2(source):
-    p = figure(x_range=races, y_range=(0, 1), plot_height=250, title="Coronavirus cases and deaths % per race in California",
+    p = figure(x_range=races, y_range=(0, 100), plot_height=250, title="Coronavirus cases and deaths % per race in California",
                toolbar_location=None) #, tools="hover", tooltips="$name: @$name")
 
     p.vbar(x=dodge('races', -0.25, range=p.x_range), top='confirmed', width=0.2, source=source,
@@ -85,9 +88,9 @@ def make_plot2(source):
     p.add_tools(HoverTool(
         tooltips=[
             ("race", "@races"),
-            ("confirmed", "@confirmed{0,0.000}"+"%"),
-            ("death", "@death{0,0.000}"+"%"),
-            ("population", "@population{0,0.000}"+"%"),
+            ("confirmed", "@confirmed{0,0.00}"+"%"),
+            ("death", "@death{0,0.00}"+"%"),
+            ("population", "@population{0,0.00}"+"%"),
 
         ]
     ))
