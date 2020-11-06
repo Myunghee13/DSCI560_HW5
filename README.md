@@ -68,7 +68,7 @@ vim Dockerfile
 ### 8. Enter 'i' for insert mode to revise the Dockerfile
 ### 9. Revise ssh ip in the last line to your ssh ip obtained from step 6. The ssh ip starts with ip and ends before "-5006."
 <p align="center">
-    <img src="screenshot2-2.png" width="1200px" height="40px"/>
+    <img src="screenshot2.png" width="1200px" height="40px"/>
 </p>
 
 ### 10. Save the revised Dockerfile by pressing Esc key, and then enter:
